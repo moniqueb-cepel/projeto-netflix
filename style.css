@@ -1,0 +1,60 @@
+body {
+    background-color: #000; /* Define o fundo preto */
+    color: #fff; /* Define a cor do texto em branco */
+    font-family: Arial, sans-serif; /* Define a fonte como Arial ou sans-serif */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    display: flex; /* Ativa o layout flexível */
+    justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+    align-items: center; /* Centraliza verticalmente os elementos filhos */
+    height: 100vh; /* Define a altura igual à altura da tela */
+}
+
+main {
+    text-align: center; /* Centraliza o conteúdo de texto horizontalmente */
+}
+
+h1 {
+    font-size: 3rem; /* Define o tamanho da fonte para título grande */
+    margin-bottom: 2rem; /* Define espaço abaixo do título */
+}
+
+.profiles {
+    display: flex; /* Ativa layout flexível para os perfis */
+    justify-content: center; /* Centraliza os perfis horizontalmente */
+    /* gap: 1rem; */ /* Comentado: espaço entre os itens do flex */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+}
+
+.profile a {
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    color: inherit; /* Herda a cor do elemento pai */
+    display: block; /* Faz o link se comportar como um bloco */
+    transition: transform 0.3s; /* Anima a transformação em 0.3 segundos */
+    margin: 0; /* Remove margem padrão */
+}
+
+.profile {
+    margin: 0; /* Remove espaçamento padrão do perfil */
+}
+
+.profile a:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
+
+img {
+    width: 150px; /* Define a largura da imagem */
+    height: 150px; /* Define a altura da imagem */
+    border-radius: 50%; /* Faz a imagem quadrada ficar redonda */
+    object-fit: cover; /* Ajusta a imagem para cobrir sem distorcer */
+    transition: outline 0.3s; /* Anima a borda externa em 0.3 segundos */
+}
+
+img:hover {
+    outline: 4px solid #fff; /* Adiciona borda branca de 4px ao passar o mouse */
+}
+
+figcaption {
+    margin-top: 1rem; /* Define espaço acima da legenda */
+    font-size: 1.2rem; /* Define o tamanho da fonte da legenda */
+}
