@@ -25,14 +25,43 @@ body {
     /* Remove o preenchimento padrão */
     display: flex;
     /* Ativa o layout flexível */
-    justify-content: center;
-    /* Centraliza horizontalmente os elementos filhos */
+    flex-direction: column;
+    /* Organiza os filhos em coluna */
     align-items: center;
-    /* Centraliza verticalmente os elementos filhos */
-    height: 100vh;
-    /* Define a altura igual à altura da tela */
+    /* Centraliza horizontalmente os elementos filhos */
+    min-height: 100vh;
+    /* Define a altura mínima igual à tela */
     transition: background-color 0.3s, color 0.3s;
     /* Anima a transição entre temas */
+}
+
+.header {
+    width: 100%;
+    /* Ocupar toda a largura */
+    padding: 20px 0;
+    /* Espaço interno no topo e base */
+    text-align: center;
+    /* Centraliza o conteúdo */
+    border-bottom: 2px solid var(--text-color);
+    /* Adiciona uma linha na base */
+}
+
+.logo {
+    font-size: 2.5rem;
+    /* Define o tamanho da fonte do logo */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    color: #e50914;
+    /* Usa a cor vermelha característica da Netflix */
+    letter-spacing: 2px;
+    /* Aumenta o espaço entre as letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adiciona uma sombra ao texto */
+}
+
+[data-theme="light"] .logo {
+    text-shadow: 1px 1px 2px rgba(229, 9, 20, 0.3);
+    /* Ajusta a sombra para o modo light */
 }
 
 .theme-toggle {
@@ -64,6 +93,16 @@ body {
 main {
     text-align: center;
     /* Centraliza o conteúdo de texto horizontalmente */
+    flex: 1;
+    /* Ocupa o espaço disponível */
+    display: flex;
+    /* Ativa layout flexível */
+    flex-direction: column;
+    /* Organiza os filhos em coluna */
+    justify-content: center;
+    /* Centra verticalmente o conteúdo */
+    width: 100%;
+    /* Ocupa toda a largura */
 }
 
 h1 {
