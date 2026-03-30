@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const img = link.querySelector('img');
             let imgSrc = img ? img.getAttribute('src') : '';
             
+            // Ajusta caminho relativo para que funcione a partir de catalogo/catalogo.html
+			// Se for um caminho relativo como "assets/1.webp", prefixa "../" para apontar ao root
+			if (imgSrc && !imgSrc.startsWith('http') && !imgSrc.startsWith('/') && !imgSrc.startsWith('..')) {
+				imgSrc = '../' + imgSrc;
+			}
+            
             console.log('Salvando no localStorage:', { nome, imgSrc }); // Debug
             
             // Salva no localStorage
